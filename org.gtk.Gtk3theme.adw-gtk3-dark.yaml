@@ -1,4 +1,4 @@
-id: org.gtk.Gtk3theme.adw-gtk3
+id: org.gtk.Gtk3theme.adw-gtk3-dark
 branch: '3.22'
 runtime: org.freedesktop.Platform
 runtime-version: '24.08'
@@ -8,12 +8,12 @@ build-extension: true
 separate-locales: false
 
 modules:
-  - name: adw-gtk3
+  - name: adw-gtk3-dark
     buildsystem: simple
     no-autogen: true
     build-commands:
-      - install -d /usr/share/runtime/share/themes/adw-gtk3
-      - cp -a adw-gtk3/gtk-3.0 /usr/share/runtime/share/themes/adw-gtk3
+      - install -d /usr/share/runtime/share/themes/adw-gtk3-dark
+      - cp -a adw-gtk3-dark/gtk-3.0 /usr/share/runtime/share/themes/adw-gtk3-dark
     sources:
       - type: archive
         strip-components: 0
@@ -32,4 +32,4 @@ modules:
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
     sources:
       - type: file
-        path: org.gtk.Gtk3theme.adw-gtk3.metainfo.xml
+        path: org.gtk.Gtk3theme.adw-gtk3-dark.metainfo.xml
